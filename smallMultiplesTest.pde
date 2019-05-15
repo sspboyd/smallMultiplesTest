@@ -9,11 +9,23 @@ void setup() {
   size(1080, 1080);
   background(255);
 
-  // I usually pick dimensions from this list of numbers, 4,7,11,18,29,47,76...
-  rows = 76; 
-  // rows = 47; 
-  cols = 4;
+  // rows = 4;
+  rows = 7;
+  // rows = 11;
+  // rows = 18;
+  // rows = 29;
+  // rows = 47;
+  // rows = 76;
+  // rows = 123;
+
+  // cols = 4;
+  cols = 7;
   // cols = 11;
+  // cols = 18;
+  // cols = 29;
+  // cols = 47;
+  // cols = 76;
+  // cols = 123;
 
   render();
 }
@@ -49,7 +61,7 @@ void render() {
       color cellBkg = random(1)>0.5?color(95, 191, 245, 47):color(241, 115, 0, 47);
       fill(cellBkg);
       rect(7, 7, cellW-7, cellH-7, 76);
-      
+
       int barCount = barNums[barNumsIdx++];
       bw = (.8*cellW)/barCount;
 
@@ -68,7 +80,7 @@ void render() {
       popMatrix();
     }
   }
-  
+
   // draw the grid
   blendMode(MULTIPLY);  
   stroke(gridClr);
